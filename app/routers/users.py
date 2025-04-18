@@ -30,7 +30,7 @@ async def get_all_users(db=Depends(get_session)):
 
 
 @router.post("/login")
-async def flogin(user: UserLogin, db=Depends(get_session)):
+async def login(user: UserLogin, db=Depends(get_session)):
     """
     User login.
     """
@@ -44,7 +44,7 @@ async def flogin(user: UserLogin, db=Depends(get_session)):
 
 
 @router.post("/register")
-async def fregister(user: UserLogin, db=Depends(get_session)):
+async def register(user: UserLogin, db=Depends(get_session)):
     """
     User registration.
     """

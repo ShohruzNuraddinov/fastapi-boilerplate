@@ -24,3 +24,9 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 60
 REFRESH_TOKEN_EXPIRE_MINUTES = 60 * 24 * 30
 SECRET_KEY = env.str("SECRET_KEY")
 ALGORITHM = "HS256"
+
+
+# Redis configuration
+REDIS_HOST = env.str("REDIS_HOST", default="localhost")
+REDIS_PORT = env.int("REDIS_PORT", default=6379)
+REDIS_DB = env.int("REDIS_DB", default=0)
